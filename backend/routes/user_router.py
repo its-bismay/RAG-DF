@@ -53,21 +53,6 @@ async def create_user(user:User):
     }
     
 
-# @router.post('/user/login')
-# async def login_user(login_data: LoginUser):
-#     user = usersdb.find_one({"email": login_data.email})
-    
-#     if not user:
-#         return {"error": "Invalid email or password"}
-    
-#     if bcrypt.checkpw(login_data.password.encode('utf-8'), user["password"].encode('utf-8')):
-#         return {"message": "Login successful!",
-#                 "user_data":{
-#                     "username":user["username"],
-#                     "email":user["email"]
-#                 }}
-#     else:
-#         return {"error": "Invalid email or password"}
 
 @router.post('/user/login')
 async def login_user(login_data: LoginUser):
